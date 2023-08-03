@@ -15,10 +15,10 @@ RUN pip install wandb && \
     pip install --upgrade tqdm && \
     pip install timm && \
     pip install einops \
-        pytorch-lightning
-        Lightning
-        transformers
-        datasets
+        pytorch-lightning \
+        Lightning \
+        transformers \
+        datasets \
         'huggingface_hub[cli,torch]'
 
 # benchy

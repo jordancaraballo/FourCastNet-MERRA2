@@ -1,4 +1,4 @@
-FROM nvcr.io/nvidia/pytorch:21.11-py3
+FROM nersc/pytorch:ngc-23.04-v0
 
 # update repo info
 RUN apt update -y
@@ -14,7 +14,12 @@ RUN pip install wandb && \
     pip install ruamel.yaml && \
     pip install --upgrade tqdm && \
     pip install timm && \
-    pip install einops
+    pip install einops \
+        pytorch-lightning
+        Lightning
+        transformers
+        datasets
+        'huggingface_hub[cli,torch]'
 
 # benchy
 RUN pip install git+https://github.com/romerojosh/benchy.git
